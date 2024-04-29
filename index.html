@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เปิด YouTube และค้นหาเพลง</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เปิด YouTube และค้นหาเพลง</h1>
+        <div class="search-container">
+            <form action="https://www.youtube.com/results" method="get" target="_blank">
+                <input type="text" name="search_query" id="searchQuery" placeholder="ค้นหาเพลง...">
+                <button type="submit">ค้นหา</button>
+            </form>
+        </div>
+        <div class="video-container">
+            <h2>หรือเปิด YouTube โดยตรง</h2>
+            <input type="text" id="youtubeLink" placeholder="วางลิงก์ YouTube ที่นี่">
+            <button onclick="openYouTube()">เปิด</button>
+        </div>
+    </div>
+
+    <script>
+        function openYouTube() {
+            var youtubeLink = document.getElementById("youtubeLink").value;
+            window.open(youtubeLink, "_blank");
+        }
+    </script>
+</body>
+</html>
